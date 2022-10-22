@@ -1,4 +1,4 @@
-import type { Event } from "../../common/types";
+import type { Event } from "../../../packages/common/types";
 
 export const events: Event[] = [
 	{
@@ -13,15 +13,15 @@ export const events: Event[] = [
 				imageUrl: "https://picsum.photos/200/300",
 				inspectFeedback: "No fruit",
 				reviewerFeedback: "No fruit",
-				seetrueFeedback: "No fruit"
+				seetrueFeedback: "No fruit",
 			},
 			{
 				imageUrl: "https://picsum.photos/200/300",
 				inspectFeedback: "No fruit",
 				reviewerFeedback: "No fruit",
-				seetrueFeedback: "No fruit"
-			}
-		]
+				seetrueFeedback: "No fruit",
+			},
+		],
 	},
 	{
 		id: "2",
@@ -35,15 +35,15 @@ export const events: Event[] = [
 				imageUrl: "https://picsum.photos/200/300",
 				inspectFeedback: "No fruit",
 				reviewerFeedback: "No fruit",
-				seetrueFeedback: "No fruit"
+				seetrueFeedback: "No fruit",
 			},
 			{
 				imageUrl: "https://picsum.photos/200/300",
 				inspectFeedback: "No fruit",
 				reviewerFeedback: "No fruit",
-				seetrueFeedback: "No fruit"
-			}
-		]
+				seetrueFeedback: "No fruit",
+			},
+		],
 	},
 	{
 		id: "3",
@@ -57,15 +57,15 @@ export const events: Event[] = [
 				imageUrl: "https://picsum.photos/200/300",
 				inspectFeedback: "No fruit",
 				reviewerFeedback: "No fruit",
-				seetrueFeedback: "No fruit"
+				seetrueFeedback: "No fruit",
 			},
 			{
 				imageUrl: "https://picsum.photos/200/300",
 				inspectFeedback: "No fruit",
 				reviewerFeedback: "No fruit",
-				seetrueFeedback: "No fruit"
-			}
-		]
+				seetrueFeedback: "No fruit",
+			},
+		],
 	},
 	{
 		id: "4",
@@ -79,15 +79,15 @@ export const events: Event[] = [
 				imageUrl: "https://picsum.photos/200/300",
 				inspectFeedback: "No fruit",
 				reviewerFeedback: "No fruit",
-				seetrueFeedback: "No fruit"
+				seetrueFeedback: "No fruit",
 			},
 			{
 				imageUrl: "https://picsum.photos/200/300",
 				inspectFeedback: "No fruit",
 				reviewerFeedback: "No fruit",
-				seetrueFeedback: "No fruit"
-			}
-		]
+				seetrueFeedback: "No fruit",
+			},
+		],
 	},
 	{
 		id: "5",
@@ -101,15 +101,15 @@ export const events: Event[] = [
 				imageUrl: "https://picsum.photos/200/300",
 				inspectFeedback: "No fruit",
 				reviewerFeedback: "No fruit",
-				seetrueFeedback: "No fruit"
+				seetrueFeedback: "No fruit",
 			},
 			{
 				imageUrl: "https://picsum.photos/200/300",
 				inspectFeedback: "No fruit",
 				reviewerFeedback: "No fruit",
-				seetrueFeedback: "No fruit"
-			}
-		]
+				seetrueFeedback: "No fruit",
+			},
+		],
 	},
 	{
 		id: "6",
@@ -123,8 +123,8 @@ export const events: Event[] = [
 				imageUrl: "https://picsum.photos/200/300",
 				inspectFeedback: "No fruit",
 				reviewerFeedback: "No fruit",
-				seetrueFeedback: "No fruit"
+				seetrueFeedback: "No fruit",
 			},
-		]
-	}
+		],
+	},
 ];
