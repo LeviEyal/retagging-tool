@@ -1,4 +1,4 @@
-import type { Event } from "../../../../common/types";
+import type { Event } from "../../../../../packages/common/types";
 
 export const events: Event[] = [
 	{
@@ -124,7 +124,7 @@ export const events: Event[] = [
 				inspectFeedback: "No fruit",
 				reviewerFeedback: "No fruit",
 				seetrueFeedback: "No fruit"
-			},
+			}
 		]
 	}
 ];
