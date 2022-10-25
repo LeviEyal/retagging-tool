@@ -5,7 +5,7 @@ import { RiCameraSwitchLine } from "react-icons/ri";
 import { AiOutlineCloudDownload } from "react-icons/ai";
 import { BsToggleOff } from "react-icons/bs";
 import PrismaZoom from "react-prismazoom";
-import { useEventFlow } from "./useEventsFlow";
+import { useEventsFlow } from "./useEventsFlow";
 import { ReactElement } from "react";
 
 export default function EventView(): ReactElement {
@@ -25,7 +25,7 @@ export default function EventView(): ReactElement {
 		hasNext,
 		hasPrev,
 		isViewsToggled
-	} = useEventFlow();
+	} = useEventsFlow();
 
 	if (isLoading || isError || !data) {
 		return <LoadingOrError error={error as Error} />;
@@ -159,7 +159,7 @@ export default function EventView(): ReactElement {
 
 			{/* SIDE VIEW */}
 			<section className='col-span-1 row-span-1 overflow-hidden rounded border border-gray-300 bg-white pb-40 shadow'>
-				<p className='mx-2 p-2 text-2xl font-bold  border-b border-gray-200'>
+				<p className='mx-2 border-b border-gray-200 p-2  text-2xl font-bold'>
 					{!isViewsToggled ? "Side View" : "Top View"}
 				</p>
 				<PrismaZoom>

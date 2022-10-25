@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 import { useKeyPress } from "hooks/useKeyPressed";
 
-export const useEventFlow = () => {
+export const useEventsFlow = () => {
 	const navigate = useNavigate();
 	const [isViewsToggled, setIsViewsToggled] = useState(false);
 	const [eventIdx, setEventIdx] = useState(0);
@@ -17,7 +17,8 @@ export const useEventFlow = () => {
 	const rightKeyPress = useKeyPress("ArrowRight");
 	const leftKeyPress = useKeyPress("ArrowLeft");
 
-	const nextEvent = () => eventIdx < (events?.length || 0) - 1 && setEventIdx(prev => prev + 1);
+	const nextEvent = () =>
+		eventIdx < (events?.length || 0) - 1 && setEventIdx(prev => prev + 1);
 	const prevEvent = () => eventIdx > 0 && setEventIdx(prev => prev - 1);
 
 	useEffect(() => {
