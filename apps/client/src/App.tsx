@@ -12,7 +12,7 @@ export default function App(): ReactElement {
 			<Suspense fallback={<LoadingOrError />}>
 				<Routes>
 					<Route path='/' element={<Welcome />} />
-					<Route path='/event/:id' element={<EventView />} />
+					<Route path='/events' element={<EventView />} />
 				</Routes>
 			</Suspense>
 		</BrowserRouter>

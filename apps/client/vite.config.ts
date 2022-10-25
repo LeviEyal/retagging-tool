@@ -6,6 +6,10 @@ import { VitePWA } from "vite-plugin-pwa";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig(({ mode }) => ({
+	server: {
+    host: true,
+		port: 7000,
+  },
 	optimizeDeps: {
 		disabled: false
 	},

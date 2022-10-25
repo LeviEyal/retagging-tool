@@ -4,16 +4,9 @@ import { createRoot } from "react-dom/client";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { registerSW } from "virtual:pwa-register";
 import "./index.css";
-import { worker } from "mocks/browser";
+import ewe from './pages/EventView'
 
 registerSW();
-
-const prepare = async (): Promise<void> => {
-  if (import.meta.env.DEV) {
-    worker.start();
-  }
-};
-
 
 const MAX_RETRIES = 1;
 const queryClient = new QueryClient({
@@ -25,20 +18,14 @@ const queryClient = new QueryClient({
 	}
 });
 
-
-prepare().then(() => {
-	const container = document.querySelector("#root");
-	if (container) {
-		const root = createRoot(container);
-		root.render(
-			<StrictMode>
-				<QueryClientProvider client={queryClient}>
-					<App />
-				</QueryClientProvider>
-			</StrictMode>
-		);
-	}
-
-}).catch((error) => {
-	console.error(error);
-});
+const container = document.querySelector("#root");
+if (container) {
+	const root = createRoot(container);
+	root.render(
+		<StrictMode>
+			<QueryClientProvider client={queryClient}>
+				<App />
+			</QueryClientProvider>
+		</StrictMode>
+	);
+}
