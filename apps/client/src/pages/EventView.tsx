@@ -154,9 +154,10 @@ export default function EventView(): ReactElement {
 									<select
 										name='seetrue-detection-options'
 										id=''
+										defaultValue={detection.seetrueFeedback}
 										className='rounded border-cyan-600'
 									>
-										<option value='' disabled selected hidden>
+										<option value='' disabled hidden>
 											Your feedback...
 										</option>
 										<option value='firearms'>Firearms</option>

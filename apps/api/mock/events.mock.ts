@@ -1,183 +1,42 @@
 import type { Event } from "../../../packages/types";
 
-export const events: Event[] = [
-	{
-		id: "1",
-		site: "gatwick",
-		lane: "Lane 1",
-		date: "2021-09-01T00:00:00.000Z",
-		topViewImageUrl: "/src/assets/bags/1.png",
-		sideViewImageUrl: "/src/assets/bags/side1.jpg",
-		detections: [
-			{
-				id: Math.random().toString(),
-				imageUrl: "https://picsum.photos/150/100",
-				inspectFeedback: "Knife",
-				reviewerFeedback: "Sharps",
-				seetrueFeedback: "",
-			},
-			{
-				id: Math.random().toString(),
-				imageUrl: "https://picsum.photos/150/100",
-				inspectFeedback: "No fruit",
-				reviewerFeedback: "No fruit",
-				seetrueFeedback: "No fruit",
-			},
-		],
-	},
-	{
-		id: "2",
-		site: "Site 2",
-		lane: "Lane 2",
-		date: "2021-09-02T00:00:00.000Z",
-		topViewImageUrl: "/src/assets/bags/2.png",
-		sideViewImageUrl: "/src/assets/bags/side2.jpg",
-		detections: [
-			{
-				id: Math.random().toString(),
-				imageUrl: "https://picsum.photos/200/300",
-				inspectFeedback: "No fruit",
-				reviewerFeedback: "No fruit",
-				seetrueFeedback: "No fruit",
-			},
-			{
-				id: Math.random().toString(),
-				imageUrl: "https://picsum.photos/200/300",
-				inspectFeedback: "No fruit",
-				reviewerFeedback: "No fruit",
-				seetrueFeedback: "No fruit",
-			},
-		],
-	},
-	{
-		id: "3",
-		site: "Site 3",
-		lane: "Lane 3",
-		date: "2021-09-03T00:00:00.000Z",
-		topViewImageUrl: "/src/assets/bags/3.png",
-		sideViewImageUrl: "/src/assets/bags/side3.jpg",
-		detections: [
-			{
-				id: Math.random().toString(),
-				imageUrl: "https://picsum.photos/200/300",
-				inspectFeedback: "No fruit",
-				reviewerFeedback: "No fruit",
-				seetrueFeedback: "No fruit",
-			},
-			{
-				id: Math.random().toString(),
-				imageUrl: "https://picsum.photos/200/300",
-				inspectFeedback: "No fruit",
-				reviewerFeedback: "No fruit",
-				seetrueFeedback: "No fruit",
-			},
-		],
-	},
-	{
-		id: "4",
-		site: "Site 4",
-		lane: "Lane 4",
-		date: "2021-09-04T00:00:00.000Z",
-		topViewImageUrl: "/src/assets/bags/4.png",
-		sideViewImageUrl: "/src/assets/bags/side4.jpg",
-		detections: [
-			{
-				id: Math.random().toString(),
-				imageUrl: "https://picsum.photos/200/300",
-				inspectFeedback: "No fruit",
-				reviewerFeedback: "No fruit",
-				seetrueFeedback: "No fruit",
-			},
-			{
-				id: Math.random().toString(),
-				imageUrl: "https://picsum.photos/200/300",
-				inspectFeedback: "No fruit",
-				reviewerFeedback: "No fruit",
-				seetrueFeedback: "No fruit",
-			},
-			{
-				id: Math.random().toString(),
-				imageUrl: "https://picsum.photos/200/300",
-				inspectFeedback: "No fruit",
-				reviewerFeedback: "No fruit",
-				seetrueFeedback: "No fruit",
-			},
-			{
-				id: Math.random().toString(),
-				imageUrl: "https://picsum.photos/200/300",
-				inspectFeedback: "No fruit",
-				reviewerFeedback: "No fruit",
-				seetrueFeedback: "No fruit",
-			},
-			{
-				id: Math.random().toString(),
-				imageUrl: "https://picsum.photos/200/300",
-				inspectFeedback: "No fruit",
-				reviewerFeedback: "No fruit",
-				seetrueFeedback: "No fruit",
-			},
-			{
-				id: Math.random().toString(),
-				imageUrl: "https://picsum.photos/200/300",
-				inspectFeedback: "No fruit",
-				reviewerFeedback: "No fruit",
-				seetrueFeedback: "No fruit",
-			},
-			{
-				id: Math.random().toString(),
-				imageUrl: "https://picsum.photos/200/300",
-				inspectFeedback: "No fruit",
-				reviewerFeedback: "No fruit",
-				seetrueFeedback: "No fruit",
-			},
-			{
-				id: Math.random().toString(),
-				imageUrl: "https://picsum.photos/200/300",
-				inspectFeedback: "No fruit",
-				reviewerFeedback: "No fruit",
-				seetrueFeedback: "No fruit",
-			},
-		],
-	},
-	{
-		id: "5",
-		site: "Site 5",
-		lane: "Lane 5",
-		date: "2021-09-05T00:00:00.000Z",
-		topViewImageUrl: "https://picsum.photos/200/300",
-		sideViewImageUrl: "https://picsum.photos/200/300",
-		detections: [
-			{
-				id: Math.random().toString(),
-				imageUrl: "https://picsum.photos/200/300",
-				inspectFeedback: "No fruit",
-				reviewerFeedback: "No fruit",
-				seetrueFeedback: "No fruit",
-			},
-			{
-				id: Math.random().toString(),
-				imageUrl: "https://picsum.photos/200/300",
-				inspectFeedback: "No fruit",
-				reviewerFeedback: "No fruit",
-				seetrueFeedback: "No fruit",
-			},
-		],
-	},
-	{
-		id: "6",
-		site: "Site 6",
-		lane: "Lane 6",
-		date: "2021-09-06T00:00:00.000Z",
-		topViewImageUrl: "https://picsum.photos/200/300",
-		sideViewImageUrl: "https://picsum.photos/200/300",
-		detections: [
-			{
-				id: Math.random().toString(),
-				imageUrl: "https://picsum.photos/200/300",
-				inspectFeedback: "No fruit",
-				reviewerFeedback: "No fruit",
-				seetrueFeedback: "No fruit",
-			},
-		],
-	},
+const sample: <T>(arr: T[]) => T = (arr) =>
+	arr[Math.floor(Math.random() * arr.length)];
+
+const feedbacks = [
+	"firearms",
+	"explosives",
+	"drugs",
+	"sharps",
+	"other",
+	"clear",
 ];
+
+const numberOfMockImages = 9;
+const numberOfMockSideImages = 4;
+const randomNumber = (max: number) => Math.floor(Math.random() * max) + 1;
+
+export const events: Event[] = [...Array(30)].map((_, i) => ({
+	id: i.toString(),
+	site: "gatwick",
+	lane: "Lane 1",
+	date: new Date().toISOString(),
+	topViewImageUrl: 	`/src/assets/bags/${randomNumber(numberOfMockImages)}.png`,
+	sideViewImageUrl: `/src/assets/bags/side${randomNumber(numberOfMockSideImages)}.jpg`,
+	detections: [
+		{
+			id: Math.random().toString(),
+			imageUrl: `/src/assets/bags/side${randomNumber(numberOfMockSideImages)}.jpg`,
+			inspectFeedback: sample(feedbacks),
+			reviewerFeedback: sample(feedbacks),
+			seetrueFeedback: "",
+		},
+		{
+			id: Math.random().toString(),
+			imageUrl: `/src/assets/bags/side${randomNumber(numberOfMockSideImages)}.jpg`,
+			inspectFeedback: sample(feedbacks),
+			reviewerFeedback: sample(feedbacks),
+			seetrueFeedback: "",
+		},
+	],
+}));
