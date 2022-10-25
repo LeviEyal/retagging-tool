@@ -45,7 +45,7 @@ export default function EventView(): ReactElement {
 					<strong>Image ID</strong> {data.id}
 				</p>
 				<p>
-					{eventIdx + 1} out of {events.length}
+					{eventIdx + 1} out of {events?.length}
 				</p>
 			</section>
 
@@ -159,7 +159,7 @@ export default function EventView(): ReactElement {
 
 			{/* SIDE VIEW */}
 			<section className='col-span-1 row-span-1 overflow-hidden rounded border border-gray-300 bg-white pb-40 shadow'>
-				<p className='mx-2 p-2 text-2xl font-bold'>
+				<p className='mx-2 p-2 text-2xl font-bold  border-b border-gray-200'>
 					{!isViewsToggled ? "Side View" : "Top View"}
 				</p>
 				<PrismaZoom>
