@@ -17,21 +17,25 @@ export const useEventsFlow = () => {
 	const rightKeyPress = useKeyPress("ArrowRight");
 	const leftKeyPress = useKeyPress("ArrowLeft");
 
-	const nextEvent = () =>
-		eventIdx < (events?.length || 0) - 1 && setEventIdx(prev => prev + 1);
-	const prevEvent = () => eventIdx > 0 && setEventIdx(prev => prev - 1);
-
-	useEffect(() => {
-		if (rightKeyPress) nextEvent();
-		if (leftKeyPress) prevEvent();
-	}, [rightKeyPress, leftKeyPress]);
-
 	const {
 		data: events,
 		isLoading,
 		isError,
 		error
 	} = useQuery(["events"], getEvents);
+
+	const eventsCount = events?.length || 0;
+
+	const nextEvent = () => setEventIdx(prev => (prev + 1) % eventsCount);
+	const prevEvent = () =>
+		setEventIdx(
+			prev => (((prev - 1) % eventsCount) + eventsCount) % eventsCount
+		);
+
+	useEffect(() => {
+		if (rightKeyPress) nextEvent();
+		if (leftKeyPress) prevEvent();
+	}, [rightKeyPress, leftKeyPress]);
 
 	const data = events?.[eventIdx];
 
@@ -44,11 +48,9 @@ export const useEventsFlow = () => {
 
 	const handleViewsToggle = () => setIsViewsToggled(!isViewsToggled);
 	const handleExit = () => navigate("/");
-	const hasNext = eventIdx >= (events?.length || 0) - 1;
-	const hasPrev = eventIdx < 1;
 
 	return {
-		events,
+		eventsCount,
 		eventIdx,
 		isLoading,
 		isError,
@@ -60,8 +62,6 @@ export const useEventsFlow = () => {
 		handleExit,
 		nextEvent,
 		prevEvent,
-		hasNext,
-		hasPrev,
 		isViewsToggled
 	};
 };

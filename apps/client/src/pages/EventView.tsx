@@ -11,7 +11,7 @@ import { downloadJsonFile } from "utils/downloadFile";
 
 export default function EventView(): ReactElement {
 	const {
-		events,
+		eventsCount,
 		eventIdx,
 		isLoading,
 		isError,
@@ -23,8 +23,6 @@ export default function EventView(): ReactElement {
 		prevEvent,
 		sideView,
 		topView,
-		hasNext,
-		hasPrev,
 		isViewsToggled
 	} = useEventsFlow();
 
@@ -46,7 +44,7 @@ export default function EventView(): ReactElement {
 					<strong>Image ID</strong> {data.id}
 				</p>
 				<p>
-					{eventIdx + 1} out of {events?.length}
+					{eventIdx + 1} out of {eventsCount}
 				</p>
 			</section>
 
@@ -106,14 +104,14 @@ export default function EventView(): ReactElement {
 						<img src={topView} />
 					</PrismaZoom>
 				</div>
-				<button disabled={hasNext}>
+				<button>
 					<img
 						className='absolute right-5 top-1/2 scale-150'
 						src={rightArrow}
 						onClick={nextEvent}
 					/>
 				</button>
-				<button disabled={hasPrev}>
+				<button>
 					<img
 						className='absolute left-5 top-1/2 rotate-180 scale-150'
 						src={rightArrow}
@@ -181,7 +179,7 @@ export default function EventView(): ReactElement {
 					{!isViewsToggled ? "Side View" : "Top View"}
 				</p>
 				<PrismaZoom>
-					<img src={sideView} />
+					<img className="h-60 m-auto" src={sideView} />
 				</PrismaZoom>
 			</section>
 		</div>
