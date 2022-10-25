@@ -7,6 +7,7 @@ import { BsToggleOff } from "react-icons/bs";
 import PrismaZoom from "react-prismazoom";
 import { useEventsFlow } from "./useEventsFlow";
 import { ReactElement } from "react";
+import { downloadJsonFile } from "utils/downloadFile";
 
 export default function EventView(): ReactElement {
 	const {
@@ -93,6 +94,7 @@ export default function EventView(): ReactElement {
 						<button
 							className='mx-2 inline-flex items-center justify-center gap-5 rounded border border-cyan-600 p-2 px-3 text-cyan-800 hover:bg-cyan-600 hover:text-white'
 							type='button'
+							onClick={() => downloadJsonFile(data, `event-${data.id}`)}
 						>
 							<AiOutlineCloudDownload />
 							Download Event
