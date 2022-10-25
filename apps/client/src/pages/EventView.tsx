@@ -141,7 +141,7 @@ export default function EventView(): ReactElement {
 							</th>
 						</tr>
 					</thead>
-					<tbody className='bg-grey-light flex h-[430px] w-full flex-col overflow-y-scroll text-lg'>
+					<tbody className='bg-grey-light flex h-[430px] w-full flex-col overflow-y-scroll text-xl'>
 						{data.detections.map(detection => (
 							<tr
 								className='flex w-full items-center border bg-slate-100'
@@ -152,7 +152,23 @@ export default function EventView(): ReactElement {
 								</td>
 								<td className='w-1/4 p-4'>{detection.inspectFeedback}</td>
 								<td className='w-1/4 p-4'>{detection.reviewerFeedback}</td>
-								<td className='w-1/4 p-4'>{detection.seetrueFeedback}</td>
+								<td className='w-1/4 p-4'>
+									<select
+										name='seetrue-detection-options'
+										id=''
+										className='rounded border-cyan-600'
+									>
+										<option value='' disabled selected hidden>
+											Your feedback...
+										</option>
+										<option value='firearms'>Firearms</option>
+										<option value='sharps'>Sharps</option>
+										<option value='tip'>Tip</option>
+										<option value='other'>Other</option>
+										<option value='clear'>Clear</option>
+									</select>
+								</td>
+								<td className='px-8' />
 							</tr>
 						))}
 					</tbody>
