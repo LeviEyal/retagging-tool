@@ -33,14 +33,14 @@ export default function EventView(): ReactElement {
 	return (
 		<div className='grid h-screen grid-cols-[3fr_2fr] grid-rows-[70px_500px_1fr] gap-2 bg-gradient-to-b from-slate-300 to-slate-300 p-5 text-xl'>
 			{/* TOP LEFT BAR */}
-			<section className='relative col-span-1 row-span-1 flex justify-between overflow-hidden rounded bg-gradient-to-r from-[#0e3341] via-gray-800 to-gray-800 p-5 text-2xl text-white shadow'>
+			<section className='relative col-span-1 row-span-1 flex justify-between items-center overflow-hidden rounded bg-gradient-to-r from-[#0e3341] via-gray-800 to-gray-800 p-5 text-2xl text-white shadow'>
 				<div className='absolute -top-20 left-20 flex h-56 w-24 rotate-45 justify-center bg-white ring-2 ring-offset-8' />
 				<img
 					className='absolute left-24 top-2 z-50 h-14 '
 					src={seeTrueLabel}
 					alt=''
 				/>
-				<p className='ml-56'>
+				<p className='ml-56 truncate text-sm'>
 					<strong>Image ID</strong> {data.id}
 				</p>
 				<p>

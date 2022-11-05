@@ -38,7 +38,7 @@ app.get("/api/events/:id", (req, res) => {
 	res.json(event);
 });
 
-const PORT = 7001;
+const PORT = 7005;
 
 app.listen(PORT, () => {
 	console.log("Server started on port  " + PORT);

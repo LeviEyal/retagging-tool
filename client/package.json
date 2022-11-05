@@ -3,7 +3,6 @@
   "license": "MIT",
   "private": true,
   "version": "0.0.0",
-  "proxy": "http://localhost:7001",
   "scripts": {
     "build": "vite build",
     "commit": "cz",
