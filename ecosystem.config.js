@@ -25,7 +25,6 @@ module.exports = {
 			ref: "origin/without-turborepo",
 			repo: "https://github.com/LeviEyal/retagging-tool",
 			path: "home/st-admin/retagging-tool",
-			"pre-deploy-local": "",
 			"post-deploy":
 				"pm2 reload ecosystem.config.js --env production",
       "post-setup": "cd api && npm install && cd .. && cd client && npm install && cd .."
