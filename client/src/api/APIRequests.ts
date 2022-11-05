@@ -1,6 +1,6 @@
 import type { Event } from "../../../shared/types";
 
-const SERVER_URL = "http://localhost:5000/api";
+const SERVER_URL = "http://localhost:7005/api";
 
 export const getEvents = async (): Promise<Event[]> => {
 	const response = await fetch(`${SERVER_URL}/events?site=gatwick&fromDate=2022-04-24 00:00:00&toDate=2022-05-09 20:20:18`);
