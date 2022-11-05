@@ -38,8 +38,8 @@ app.get("/api/events/:id", (req, res) => {
 	res.json(event);
 });
 
-const PORT = 7005;
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
-	console.log("Server started on port  " + PORT);
+	console.log("Server started on port " + PORT);
 });

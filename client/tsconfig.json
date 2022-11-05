@@ -13,8 +13,11 @@
 		"skipLibCheck": true,
 		"strict": true,
 		"target": "ESNext",
-		"types": ["vite/client", "vitest/globals", "vite-plugin-pwa/client"]
+		"types": ["vite/client", "vitest/globals", "vite-plugin-pwa/client"],
+    "paths": {
+      "@shared/*": ["../shared/*"]
+    }
 	},
-	"include": ["src", "../common/types.ts"],
+	"include": ["src", "../shared/types.ts"],
 	"references": [{ "path": "./tsconfig.node.json" }]
 }
