@@ -25,10 +25,9 @@ module.exports = {
 			ref: "origin/without-turborepo",
 			repo: "https://github.com/LeviEyal/retagging-tool",
       path: ".",
-      "pre-setup": "echo 'This is a pre-setup command'",
+      "post-setup": "cd api && npm install && cd .. && cd client && npm install && cd ..",
 			"post-deploy":
 				"pm2 reload ecosystem.config.js --env production",
-      "post-setup": "cd api && npm install && cd .. && cd client && npm install && cd .."
 		},
 	},
 };
