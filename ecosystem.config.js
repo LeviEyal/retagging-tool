@@ -24,10 +24,11 @@ module.exports = {
 			host: "192.168.29.125",
 			ref: "origin/without-turborepo",
 			repo: "https://github.com/LeviEyal/retagging-tool",
-      path: ".",
-      "post-setup": "cd api && npm install && cd .. && cd client && npm install && cd ..",
+      path: "home/st-admin/retagging-tool",
+      "pre-setup": "echo 'This is a pre-setup command'",
 			"post-deploy":
 				"pm2 reload ecosystem.config.js --env production",
+      "post-setup": "cd api && npm install && cd .. && cd client && npm install && cd .."
 		},
 	},
 };
