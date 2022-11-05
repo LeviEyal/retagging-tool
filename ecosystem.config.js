@@ -22,13 +22,14 @@ module.exports = {
 		production: {
 			user: "st-admin",
 			host: "192.168.29.125",
-			ref: "origin/master",
-			repo: "GIT_REPOSITORY",
-			path: "DESTINATION_PATH",
+			ref: "origin/without-turborepo",
+			repo: "https://github.com/LeviEyal/retagging-tool",
+			path: ".",
 			"pre-deploy-local": "",
 			"post-deploy":
-				"npm install && pm2 reload ecosystem.config.js --env production",
-			"pre-setup": "",
+				"pm2 reload ecosystem.config.js --env production",
+      "pre-setup": "",
+      "post-setup": "cd api && npm install && cd .. && cd client && npm install && cd .."
 		},
 	},
 };
