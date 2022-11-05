@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
     "dev:server": "cd api && npm run dev",
-    "dev:client": "cd client && npm run dev"
+    "dev:client": "cd client && npm run dev",
+    "install": "concurrently \"npm run install:server\" \"npm run install:client\"",
+    "install:server": "cd api && npm install",
+    "install:client": "cd client && npm install"
   },
   "keywords": [],
   "author": "",
